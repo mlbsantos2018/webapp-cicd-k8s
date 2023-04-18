@@ -7,6 +7,9 @@ RUN apt-get update \
 
 WORKDIR /var/www/html
 
+ENV MYSQL_ROOT_PASSWORD=Senha123 \
+    MYSQL_DATABASE=meubanco
+
 COPY *.php .
 COPY frontend/* .
 
