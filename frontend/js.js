@@ -5,8 +5,7 @@ $("#button-blue").on("click", function() {
     var txt_comentario = $("#comment").val();
 
     $.ajax({
-        url: "",
-        
+        url: "http://webapp-service/incluir.php",
         type: "post",
         data: {nome: txt_nome, comentario: txt_comentario, email: txt_email},
         beforeSend: function() {
