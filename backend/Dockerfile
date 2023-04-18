@@ -7,6 +7,7 @@ RUN apt-get update \
 
 WORKDIR /var/www/html
 
-COPY *.php /var/www/html/
+COPY *.php .
+COPY frontend/* .
 
 EXPOSE 80
