@@ -1,5 +1,5 @@
 <?php
-$servername = "webapp-service";
+$servername = "database-service";
 $username = "root";
 $password = "Senha123";
 $database = "meubanco";
