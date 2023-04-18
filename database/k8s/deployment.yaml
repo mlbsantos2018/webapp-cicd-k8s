@@ -20,6 +20,19 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
+        env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: ROOT_PASSWORD
+                  
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: MYSQL_DATABASE
+
         volumeMounts:
         - name: webapp-volume
           mountPath: /var/lib/mysql
